@@ -1,6 +1,6 @@
 export type FreqMap = Map<string, number>;
 
-export class Vector {
+export class DocVector {
   freqs: FreqMap; // represent vector as Bag-Of-Words, kinda
 
   constructor(doc: string) {
@@ -28,7 +28,7 @@ export class Vector {
     return total;
   }
 
-  cosine_similarity(other: Vector): number {
+  cosine_similarity(other: DocVector): number {
     let numerator = 0;
 
     this.freqs.forEach((v, k) => {

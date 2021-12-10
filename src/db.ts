@@ -1,4 +1,4 @@
-import { Vector } from "./vector";
+import { DocVector } from "./vector";
 
 export const docs = [
   "At Scale You Will Hit Every Performance Issue I used to think I knew a bit about performance scalability and how to keep things trucking when you hit large amounts of data Truth is I know diddly squat on the subject since the most I have ever done is read about how its done To understand how I came about realising this you need some background",
@@ -10,4 +10,4 @@ export const docs = [
   "Why CAPTCHA Never Use Numbers 0 1 5 7 Interestingly this sort of question pops up a lot in my referring search term stats Why CAPTCHAs never use the numbers 0 1 5 7 Its a relativity simple question with a reasonably simple answer Its because each of the above numbers are easy to confuse with a letter See the below",
 ];
 
-export const index = docs.map((doc) => new Vector(doc));
+export const index = docs.map((doc) => new DocVector(doc));
