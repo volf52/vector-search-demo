@@ -8,7 +8,7 @@ export class Vector {
 
     doc
       .toLowerCase()
-      .split(" ")
+      .split(" ") // naive tokenization of words
       .forEach((word) => {
         let old_freq = freqs.get(word);
         if (old_freq === undefined) freqs.set(word, 1);

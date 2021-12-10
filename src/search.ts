@@ -3,7 +3,7 @@ import { index, docs } from "./db";
 
 export type Match = [number, string];
 
-export const search = (query: string) => {
+export const knn_search = (query: string, k = 5) => {
   let query_vec = new Vector(query);
   let matches: Array<Match> = [];
 
@@ -16,5 +16,5 @@ export const search = (query: string) => {
 
   matches.sort((a, b) => b[0] - a[0]); // descending by similarity
 
-  return matches;
+  return matches.slice(0, k);
 };

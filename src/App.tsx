@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { docs } from "./db";
-import { search, Match } from "./search";
+import { knn_search, Match } from "./search";
 
 import "./App.css";
 
@@ -9,7 +9,7 @@ function App() {
   const [matches, setMatches] = useState<Match[]>([]);
 
   useEffect(() => {
-    const matches = search(query);
+    const matches = knn_search(query);
 
     setMatches([...matches]);
   }, [query]);
